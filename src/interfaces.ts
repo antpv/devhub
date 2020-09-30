@@ -1,1 +1,4 @@
-export interface IButtonProps {}
+export interface IButtonProps {
+  bordered?: boolean
+  rounded?: boolean
+}
