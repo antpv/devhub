@@ -24,4 +24,5 @@ body {
 p {
   line-height: var(--line-heigth);
   font-size: var(--font-size-m);
+  margin: 0;
 }

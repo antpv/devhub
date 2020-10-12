@@ -1,22 +1,21 @@
 import React from 'react'
 import './main.css'
-import { Button, Offset } from './components'
+import { Button, Offset, Divider } from './components'
 
 const App: React.FunctionComponent = () => (
   <>
-    <Button bordered rounded>
-      With border
-    </Button>
-    <Button>
-      Заказать
-    </Button>
-    <Offset top="xl">
-      <p>
-        Обратите внимание на повторения в CSS. Коричневый фон установлен в нескольких местах.<br />
-        Для некоторых CSS объявлений можно указать этот цвет выше в каскаде и наследование CSS решит эту проблему.<br />
-        Но для нетривиальных проектов это не всегда возможно.
-      </p>
+    <Offset left="xxl" right="xxl" top="xl" block>
+      <Offset right="s">
+        <Button rounded>
+          Опубликовать идею
+        </Button>
+      </Offset>
+
+      <Button rounded bordered>
+        Предпросмотр
+      </Button>
     </Offset>
+    <Divider />
   </>
 )
 

@@ -5,11 +5,11 @@ import * as serviceWorker from './serviceWorker'
 import { fromEvent } from 'rxjs'
 import { mapTo } from 'rxjs/operators'
 
-const link = document.createElement('link')
-const fontsFething$ = fromEvent(link, 'load').pipe(mapTo(true))
+const linkElement = document.createElement('link')
+const fontsFething$ = fromEvent(linkElement, 'load').pipe(mapTo(true))
 
-link.setAttribute('href', 'https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,400;1,500&display=swap')
-link.setAttribute('rel', 'stylesheet')
+linkElement.setAttribute('href', 'https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,400;1,500&display=swap')
+linkElement.setAttribute('rel', 'stylesheet')
 
 ReactDOM.render(
   <React.StrictMode>
@@ -20,7 +20,7 @@ ReactDOM.render(
 
 fontsFething$.subscribe(isLoaded => {})
 
-document.head.appendChild(link)
+document.head.appendChild(linkElement)
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
