@@ -1,5 +1,27 @@
+:root {
+  /* Offsets */
+  --space-xxs: 2px;
+  --space-xs: 4px;
+  --space-s: 8px;
+  --space-m: 12px;
+  --space-l: 16px;
+  --space-xl: 24px;
+  --space-xxl: 48px;
+
+  /* Fonts */
+  --line-heigth: 1.618;
+  --font-size-m: 14px;
+}
+
 body {
   padding: 0;
   margin: 0;
   font-family: 'Rubik', sans-serif;
+  line-height: var(--line-heigth);
+  font-size: var(--font-size-m);
+}
+
+p {
+  line-height: var(--line-heigth);
+  font-size: var(--font-size-m);
 }
